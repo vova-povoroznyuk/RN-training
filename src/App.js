@@ -1,13 +1,17 @@
 import React from 'react';
-import Dashboard from './Dashboard'
-import Navigator from './Navigator'
+import {StatusBar} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import Navigator from './Navigator';
 
 const App = () => {
-    return( 
+  return (
+    <SafeAreaProvider style={{flex: 1}}>
+      <StatusBar backgroundColor="blue" />
       <Navigator />
-      
-    )
-   
+
+      {/* </StatusBar> */}
+    </SafeAreaProvider>
+  );
 };
 
 export default App;
